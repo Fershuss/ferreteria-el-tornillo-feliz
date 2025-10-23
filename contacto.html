@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | El Tornillo Feliz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="modo-oscuro">
+  <header>
+    <h1>📞 Contáctanos</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="contacto">
+    <div class="info-contacto">
+      <h2>Estamos para ayudarte</h2>
+      <p>En <strong>El Tornillo Feliz</strong> valoramos tus proyectos. Escríbenos y te responderemos lo antes posible.</p>
+
+      <div class="iconos-contacto">
+        <div><span>📞</span> +502 5555-1234</div>
+        <div><span>📧</span> contacto@eltornillofeliz.com</div>
+        <div><span>📍</span> Zona 1, Ciudad de Guatemala</div>
+      </div>
+    </div>
+
+    <form class="form-contacto" onsubmit="return enviarFormulario()">
+      <h3>Envíanos un mensaje</h3>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Ferretería El Tornillo Feliz</p>
+  </footer>
+</body>
+</html>

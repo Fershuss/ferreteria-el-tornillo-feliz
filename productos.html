@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos | El Tornillo Feliz</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="theme-dark">
+ 
+  
+  <header>
+    <div class="left-header">
+      <div class="logo">
+        <span class="emoji">🔩</span>
+        <h1>El Tornillo Feliz</h1>
+      </div>
+    </div>
+
+    <div class="right-header">
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html" class="active">Productos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <button id="btn-carrito" class="btn-icon" aria-label="Abrir carrito">
+        🛒 <span id="contador-carrito" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="controls">
+      <div class="search-group">
+        <input id="buscador" type="search" placeholder="Buscar producto por nombre..." />
+      </div>
+
+      <div class="filters">
+        <select id="filtro-tipo">
+          <option value="">Tipo: Todos</option>
+        </select>
+
+        <select id="filtro-marca">
+          <option value="">Marca: Todas</option>
+        </select>
+
+        <div class="price-filter">
+          <input id="precio-min" type="number" placeholder="Precio min Q" min="0" />
+          <input id="precio-max" type="number" placeholder="Precio max Q" min="0" />
+        </div>
+
+        <select id="orden">
+          <option value="default">Orden: Popular</option>
+          <option value="nombre-asc">Nombre A→Z</option>
+          <option value="precio-asc">Precio ↑</option>
+          <option value="precio-desc">Precio ↓</option>
+        </select>
+
+        <button id="btn-aplicar" class="btn">Aplicar</button>
+        <button id="btn-limpiar" class="btn">Limpiar</button>
+      </div>
+    </section>
+
+    <section id="productos" class="productos grid"></section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ferretería El Tornillo Feliz</p>
+  </footer>
+
+  <!-- Carrito lateral (ya incluido en script: usa el mismo panel del index) -->
+  <aside id="panel-carrito" aria-hidden="true">
+    <div class="panel-header">
+      <h3>🛒 Tu carrito</h3>
+      <button id="cerrar-panel" class="close-btn" aria-label="Cerrar carrito">✖</button>
+    </div>
+    <div class="panel-body">
+      <ul id="lista-carrito"></ul>
+
+    <div class="panel-controls">
+  <div id="total">Total: Q0.00</div>
+  <div class="panel-actions">
+    <button id="vaciar-carrito" class="btn">Vaciar</button>
+    <button id="checkout" class="btn primary">Pagar</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>
